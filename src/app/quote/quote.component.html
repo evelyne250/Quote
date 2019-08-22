@@ -19,3 +19,17 @@
             <app-goal-form></app-goal-form>
           </div>
         </div> -->
+        <div>
+                <h1>QUOTES</h1>
+                <hr>
+                <ul>
+                    <li *ngFor='let quote of quotes;let i = index'>
+                      {{quote.quote}}
+                      <br>
+                      {{quote.Author}}
+                      <app-quote-detail [quote]='quote'></app-quote-detail>
+                      <button (click)='toggleDetails(i)'>Toggle Details</button>
+                      <app-quote-detail *ngIf='quote.showVote' [quote]='quote'></app-quote-detail>
+                    </li>
+                </ul>
+              </div>
