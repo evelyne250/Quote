@@ -19,4 +19,15 @@
 </ul>
 
 <router-outlet></router-outlet> -->
+<div>
+    <h1>QUOTES</h1>
+    <hr>
+    <ul>
+        <li *ngFor='let quote of quotes'>
+          {{quote.quote}}
+          <br>
+          {{quote.Author}}
+        </li>
+    </ul>
+  </div>
 <app-quote></app-quote>
