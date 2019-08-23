@@ -23,13 +23,15 @@
                 <h1>QUOTES</h1>
                 <hr>
                 <ul>
-                    <li *ngFor='let quote of quotes;let i = index'>
+                    <div *ngFor='let quote of quotes;let i = index'>
                       {{quote.quote}}
                       <br>
                       {{quote.Author}}
+                      <!-- <li appStrikethrough>{{quote.Author}}</li> -->
+                      <li appStrikethrough>{{quote.Author}} posted on {{quote.completeDate}}</li> 
                       <app-quote-detail [quote]='quote'></app-quote-detail>
-                      <button (click)='toggleDetails(i)'>Toggle Details</button>
+                      <button (click)='toggleDetails(i)'>More info</button>
                       <app-quote-detail *ngIf='quote.showVote' [quote]='quote'></app-quote-detail>
-                    </li>
+                    </div>
                 </ul>
               </div>
