@@ -28,13 +28,16 @@
                     <div *ngFor='let quote of quotes;let i = index'>
                       {{quote.quote}}
                       <br>
-                      {{quote.Author}}
+                      <!-- {{quote.Author}} -->
                       <!-- <li appStrikethrough>{{quote.Author}}</li> -->
-                      <li appStrikethrough>{{quote.Author}} posted on {{quote.completeDate|date|uppercase}}</li> 
-                      <app-quote-detail [quote]='quote'></app-quote-detail>
-                      <button (click)='toggleDetails(i)'>More info</button>
-                      <app-quote-detail *ngIf='quote.showVote' [quote]='quote'></app-quote-detail>
+                      <li appStrikethrough>Posted by {{quote.name}} and quoted by {{quote.Author}} posted on {{quote.completeDate|date|uppercase}}</li> 
+                      <!-- <app-quote-detail [quote]='quote'></app-quote-detail> -->
+                      <!-- <button (click)='toggleDetails(i)'>More info</button> -->
+                      <app-quote-detail [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail> 
                     </div>
+                    <!-- <div *ngIf='quote.showVote'>
+                            <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+                          </div> -->
                                 </div>
                     <div class="col-md-6">
                             <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
