@@ -28,7 +28,7 @@
                       <br>
                       {{quote.Author}}
                       <!-- <li appStrikethrough>{{quote.Author}}</li> -->
-                      <li appStrikethrough>{{quote.Author}} posted on {{quote.completeDate}}</li> 
+                      <li appStrikethrough>{{quote.Author}} posted on {{quote.completeDate|date|uppercase}}</li> 
                       <app-quote-detail [quote]='quote'></app-quote-detail>
                       <button (click)='toggleDetails(i)'>More info</button>
                       <app-quote-detail *ngIf='quote.showVote' [quote]='quote'></app-quote-detail>

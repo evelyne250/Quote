@@ -9,6 +9,8 @@ import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { HighlightJsModule } from 'ngx-highlight-js';
+import { TimeAgoPipe } from './time-ago.pipe';
+import { HighlightDirective } from './highlight.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +19,8 @@ import { HighlightJsModule } from 'ngx-highlight-js';
     StrikethroughDirective,
     DateCountPipe,
     QuoteFormComponent,
+    TimeAgoPipe,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,

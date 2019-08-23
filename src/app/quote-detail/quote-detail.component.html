@@ -6,4 +6,8 @@
       <br>
       <i title="Down Votes" ng-click="changeVote(vote, 'down')" class="fa fa-arrow-circle-down fa-2x"  ng-class="{true:'down', false:''}[vote=='down']"></i>
       <br>Vote: {{vote}}
+      <p>{{quote.Author}}</p>
+      <p>This quote was posted in {{quote.completeDate|timeAgo}}</p>
+ <!-- <p>This quote was posted in {{quote.completeDate|dateCount}} days</p>  -->
     </body>
+    
