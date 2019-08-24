@@ -5,8 +5,8 @@
 //     //   completeDate: Date
 //     }
 export class Quote {
-    showVote: boolean;
+    showName: boolean;
     constructor(public id: number,public quote: string,public Author: string, public name: string, public completeDate: Date){
-      this.showVote=false;
+      this.showName=false;
     }
   }

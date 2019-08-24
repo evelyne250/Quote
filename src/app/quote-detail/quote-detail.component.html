@@ -1,15 +1,52 @@
-<!-- <p>
-        {{quote.Author}}
-      </p> -->
-      <body ng-controller="MainCtrl">
-      <i title="Up Votes" ng-click="changeVote(vote, 'up')" class="fa fa-arrow-circle-up fa-2x" ng-class="{true:'up', false:''}[vote=='up']"></i>
+<p>
+  {{quote.Author}} 
+ </p>
+      <!-- <body ng-controller="MainCtrl"> --> 
+      <!-- <i title="Up Votes" ng-click="changeVote(vote, 'up')" class="fa fa-arrow-circle-up fa-2x" ng-class="{true:'up', false:''}[vote=='up']"></i>
       <br>
       <i title="Down Votes" ng-click="changeVote(vote, 'down')" class="fa fa-arrow-circle-down fa-2x"  ng-class="{true:'down', false:''}[vote=='down']"></i>
+      -->
       <br>Vote: {{vote}}
       <p>{{quote.Author}}</p>
       <p>This quote was posted in {{quote.completeDate|timeAgo}}</p>
-      <button (click)= 'quoteDelete(true)'>Delete Quote</button>
+      <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
       <!-- <p>This quote was posted in {{quote.completeDate|dateCount}} days</p>  -->
-</body>
+<!-- </body> -->
 
-    
+<div>
+    <div>
+
+      <div class="voting">
+        {{ votes }}
+      </div> 
+      <div class="icon">
+        Votes:
+      </div>
+
+    </div>
+
+  </div>
+
+  <div>
+
+      <a>
+      {{ title }}
+      </a>
+
+    <ul>
+      <li class="icon1">
+        <a href (click)="UpVote()">
+        <i class="arrow up icon"></i>
+          upvote
+        </a>
+      </li>
+
+      <li class="icon1">
+        <a href (click)="DownVote()">
+        <i class="arrow down icon"></i>
+          downvote
+        </a>
+      </li>
+
+    </ul>
+  </div> 
