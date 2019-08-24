@@ -13,7 +13,7 @@ export class QuoteComponent implements OnInit {
     new Quote(3, 'Don’t Let Yesterday Take Up Too Much Of Today.','Will Rogers', 'evelyne umuhire', new Date(2019,10,15)),
    ];
   toggleDetails(index){
-    this.quotes[index].showVote = !this.quotes[index].showVote;
+    this.quotes[index].showName = !this.quotes[index].showName;
   }
   
   deleteQuote(isComplete, index){
