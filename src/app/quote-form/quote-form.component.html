@@ -1,46 +1,5 @@
-<!-- <div class="container-fluid">
-        <h1>Add new Quote:</h1>
-        <form ng-submit="submitStudnetForm()" >
-                <label for="name" >Names: </label><br />
-                <input type="text" id="name" ng-model="Author.name" /> <br />
-    
-                <label for="quote" >Quote: </label><br />
-          <textarea type="text" id="quote" ng-model="Author.quote" /></textarea> <br />
-                <label for="date" >Date</label><br />
-                    <input type="date" id="date" ng-model="student.DoB" /> <br /><br />
-    
-               
-            <input type="submit" value="Submit" /> 
-            <input type="reset" ng-click="resetForm()" value="Reset" /> <br />
-    
-        </form>
-      </div> -->
-      <!-- <div class="container-fluid">
-            <h2 class="text-center">Add a new quote</h2>
-            <hr>
-            <form>
-                <div class="form-group">
-          
-                    <label for="name">Author</label>
-                    <input type="text" required class="form-control" id="name">
-          
-                </div>
-                <div class="form-group">
-          
-                    <label for="description">Quote</label>
-                    <textarea class="form-control" id="description" rows="4" required></textarea>
-          
-                </div>
-                <div class="form-group">
-                    <label for="complete">Completion</label>
-                    <input type='date' id="complete" required>
-          
-                </div>
-            </form>
-          </div> -->
 
-
-          <div class="container-fluid">
+          <div class="container-fluid" class="back">
                 <h2 class="text-center">Add a new Quote</h2>
                 <hr>
                 <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>

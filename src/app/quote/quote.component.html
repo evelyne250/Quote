@@ -1,30 +1,10 @@
-<!-- <div class="container">
-        <h1>QUOTE</h1>
-        <hr>
-      
-        <div class="row">
-          <div class="col-md-6">
-            <div *ngFor='let quote of quotes;let i = index'>
-              <div>
-                <h6 id={{i}} appStrikethrough>{{quote.name}} due on {{goal.completeDate|date|uppercase}}</h6>
-                <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
-              </div>
-      
-              <div *ngIf='goal.showDescription'>
-                <app-goal-detail  [goal]='goal' (isComplete) = 'deleteGoal($event,i)'></app-goal-detail>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <app-goal-form></app-goal-form>
-          </div>
-        </div> -->
-        <div>
+  <div class="back">
                 <h1>QUOTES</h1>
                 <hr>
                 <ul>
                 <div class="row">
                     <div class="col-md-6">
+                        <li appAppHighlight>{{quote.quote}}</li>
                         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
                       </div>
                                 <div class="col-md-6">
@@ -32,7 +12,7 @@
                       {{quote.quote}}
                       <br>
                       
-                      <li appStrikethrough>Posted by {{quote.name}} and quoted by {{quote.Author}} posted on {{quote.completeDate|date|uppercase}}</li> 
+                      <p appAppHighlight>Posted by: {{quote.name}} <br> The author: {{quote.Author}} <br>posted in: {{quote.completeDate|timeAgo}}</p> 
                       <!-- <app-quote-detail [quote]='quote'></app-quote-detail> -->
                       <!-- <button (click)='toggleDetails(i)'>More info</button> -->
                       <app-quote-detail [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail> 
@@ -44,4 +24,5 @@
                     
                                 </div>          
                 </ul>
+                
               </div>

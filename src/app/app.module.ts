@@ -8,7 +8,6 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
-import { HighlightJsModule } from 'ngx-highlight-js';
 import { TimeAgoPipe } from './time-ago.pipe';
 import { AppHighlightDirective } from './app-highlight.directive';
 @NgModule({
