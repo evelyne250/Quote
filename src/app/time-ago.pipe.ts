@@ -27,27 +27,27 @@ export class TimeAgoPipe implements PipeTransform, OnDestroy {
         let years = Math.round(Math.abs(days/365));
         if (Number.isNaN(seconds)){
             return '';
-        } else if (seconds <= 45) {
+        } else if (seconds <= 30) {
             return 'a few seconds ago';
-        } else if (seconds <= 90) {
+        } else if (seconds <= 60) {
             return 'a minute ago';
-        } else if (minutes <= 45) {
+        } else if (minutes <= 30) {
             return minutes + ' minutes ago';
-        } else if (minutes <= 90) {
+        } else if (minutes <= 60) {
             return 'an hour ago';
-        } else if (hours <= 22) {
+        } else if (hours <= 3) {
             return hours + ' hours ago';
-        } else if (hours <= 36) {
+        } else if (hours <= 24) {
             return 'a day ago';
         } else if (days <= 25) {
             return days + ' days ago';
-        } else if (days <= 45) {
+        } else if (days <= 30) {
             return 'a month ago';
-        } else if (days <= 345) {
+        } else if (days <= 150) {
             return months + ' months ago';
-        } else if (days <= 545) {
+        } else if (days <= 365) {
             return 'a year ago';
-        } else { // (days > 545)
+        } else { 
             return years + ' years ago';
         }
     }
@@ -62,15 +62,15 @@ export class TimeAgoPipe implements PipeTransform, OnDestroy {
     }
     private getSecondsUntilUpdate(seconds:number) {
         let min = 60;
-        let hr = min * 60;
-        let day = hr * 24;
-        if (seconds < min) { // less than 1 min, update every 2 secs
+        let hour = min * 60;
+        let day = hour * 24;
+        if (seconds < min) { 
             return 2;
-        } else if (seconds < hr) { // less than an hour, update every 30 secs
+        } else if (seconds < hour) { 
             return 30;
-        } else if (seconds < day) { // less then a day, update every 5 mins
+        } else if (seconds < day) {
             return 300;
-        } else { // update every hour
+        } else { 
             return 3600;
         }
     }

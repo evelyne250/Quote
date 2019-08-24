@@ -4,7 +4,7 @@
                 <ul>
                 <div class="row">
                     <div class="col-md-6">
-                        <li appAppHighlight>{{quote.quote}}</li>
+                        <!-- <p appAppHighlight>{{quote.quote}}</p> -->
                         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
                       </div>
                                 <div class="col-md-6">
@@ -12,7 +12,7 @@
                       {{quote.quote}}
                       <br>
                       
-                      <p appAppHighlight>Posted by: {{quote.name}} <br> The author: {{quote.Author}} <br>posted in: {{quote.completeDate|timeAgo}}</p> 
+                      <p appAppHighlight>Posted by: {{quote.name}} <br> The author: {{quote.author}} <br>posted in: {{quote.completeDate|timeAgo}}</p> 
                       <!-- <app-quote-detail [quote]='quote'></app-quote-detail> -->
                       <!-- <button (click)='toggleDetails(i)'>More info</button> -->
                       <app-quote-detail [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail> 
