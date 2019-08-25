@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./votes.component.css']
 })
 export class VotesComponent implements OnInit {
-onstructor() { }
+constructor() { }
 
   ngOnInit() {
   }

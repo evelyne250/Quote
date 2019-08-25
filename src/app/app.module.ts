@@ -11,6 +11,8 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { TimeAgoPipe } from './time-ago.pipe';
 import { AppHighlightDirective } from './app-highlight.directive';
 import { VotesComponent } from './votes/votes.component';
+import { StrikethroughDirective } from './strikethrough.directive';
+import { HighlightDirective } from './highlight.directive'
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,8 @@ import { VotesComponent } from './votes/votes.component';
     TimeAgoPipe,
     AppHighlightDirective,
     VotesComponent,
+    HighlightDirective,
+    StrikethroughDirective,
   ],
   imports: [
     BrowserModule,
