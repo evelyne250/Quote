@@ -1,7 +1,9 @@
   <div class="back">
                 <h1>QUOTES</h1>
+                <p>This app will help  post your quote by filling the form and add the<br>  new quote it will immediately land on the page based on what you have entered.</p>
                 <hr>
                 <ul>
+                    <p><app-votes></app-votes></p>
                 <div class="row">
                     <div class="col-md-6">
                         <!-- <p appAppHighlight>{{quote.quote}}</p> -->
@@ -13,14 +15,9 @@
                       <br>
                       
                       <p appAppHighlight>Posted by: {{quote.name}} <br> The author: {{quote.author}} <br>posted in: {{quote.completeDate|timeAgo}}</p> 
-                      <!-- <app-quote-detail [quote]='quote'></app-quote-detail> -->
-                      <!-- <button (click)='toggleDetails(i)'>More info</button> -->
-                      <app-quote-detail [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail> 
+                         <app-quote-detail [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail> 
                     </div>
-                    <!-- <div *ngIf='quote.showVote'>
-                            <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
-                          </div> -->
-                                </div>
+                          </div>
                     
                                 </div>          
                 </ul>

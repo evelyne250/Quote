@@ -12,22 +12,9 @@
       <a>
       {{ title }}
       </a>
-
-    <ul>
-      <li class="icon1">
-        <a href (click)="UpVote()">
-        <i class="arrow up icon"></i>
-          upvote
-        </a>
-      </li>
-
-      <li class="icon1">
-        <a href (click)="DownVote()">
-        <i class="arrow down icon"></i>
-          downvote
-        </a>
-      </li>
-
-    </ul>
+<button (click)="UpVote()">Like</button>
+<button (click)="DownVote()">DisLike</button>
+ <br>
+    <br>
     <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
   </div> 
