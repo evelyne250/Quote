@@ -1,12 +1,13 @@
 
-
-<div>
+<!-- <div>
   <p><app-votes></app-votes></p>
-</div>
+</div> 
   <div class="voting">
-       votes: {{ votes }}
+      <p> {{ upvote }}</p>
  </div>  
-
+<div>
+  <p>{{ downvote }}</p>
+</div>
   <div>
 
      
@@ -15,4 +16,48 @@
  <br>
     <br>
     <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
-  </div> 
+  </div>  -->
+  <div class="votes">
+    <div class="value">
+      <div class="container-fluid">
+          <div class="value">
+        <div class="row">
+            <div class="col-md-4">
+                <p>{{ upVote }}</p>
+            </div>
+            <div class="col-md-4">
+                <p>{{ downVote }}</p>
+            </div>
+        </div>
+      </div>
+       </div>
+  </div>
+  <div class="row">
+  <div class="col-md-4">
+      <div class="item">
+         
+        <a href (click)="upVotes()">
+            Like
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+       
+        <a href (click)="downVotes()">
+            Dislike
+        </a>
+        
+      </div>
+    </div>
+    
+  </div>
+   <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
+ 
+
+
+
+
+
+
+
+
